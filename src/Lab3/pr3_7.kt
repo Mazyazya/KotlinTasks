@@ -1,5 +1,3 @@
-import kotlin.math.max
-
 fun main(){
     println("Enter a number: ")
     val a = readln().toDouble()

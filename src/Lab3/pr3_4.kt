@@ -1,5 +1,3 @@
-import kotlin.math.max
-
 fun main(){
     println("Введите большее число: ")
     val a = readln().toInt()
