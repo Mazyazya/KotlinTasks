@@ -2,13 +2,15 @@ package Lab4
 
 fun main(){
     print("Введите число: ")
-    val day = readln().toInt()
-    when (day) {
-        1 -> println("Кол")
-        2 -> println("Двойка")
-        3 -> println("Тройка")
-        4 -> println("Четверка")
-        5 -> println("Пятерка")
-        else -> println("Нет такой оценки")
+    val a = readln().toInt(); val b = readln().toInt(); val c = readln().toInt()
+    when (a == b) {
+        true -> when (b == c){
+            true -> println("Треугольник равносторонний")
+            false -> println("Треугольник равнобедренный")
+        }
+        false -> when ((b == c) or (b == c)){
+            true -> println("Треугольник равнобедренный")
+            false -> println("Треугольник разносторонний")
+        }
     }
 }

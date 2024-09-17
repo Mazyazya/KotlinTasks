@@ -1,10 +1,10 @@
 fun main(){
     println("Введите четырехзначное число: ")
-    val number = readln().toInt()
-    val a = number.toString()[0].toString().toInt()
-    val b = number.toString()[1].toString().toInt()
-    val c = number.toString()[2].toString().toInt()
-    val d = number.toString()[3].toString().toInt()
+    val number = readln()
+    val a = number[0].toString().toInt()
+    val b = number[1].toString().toInt()
+    val c = number[2].toString().toInt()
+    val d = number[3].toString().toInt()
 
 
     if (a + b == c + d) println("Сумма цифр $a и $b == сумме $c и $d")
