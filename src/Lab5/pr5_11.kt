@@ -10,9 +10,7 @@ fun main() {
 }
 
 fun isAnagram(a: String, b: String): Boolean{
-    for(i in a) {
-        if(i in b) continue
-        return false
-    }
-    return true
+    val sortA = a.replace(" ","").lowercase().toCharArray().sorted()
+    val sortB = b.replace(" ","").lowercase().toCharArray().sorted()
+    return sortA == sortB
 }
