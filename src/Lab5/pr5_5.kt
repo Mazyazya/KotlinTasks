@@ -7,10 +7,11 @@ fun main() {
     else println("Число непростое")
 }
 
-fun isSimple(fact: Int): Boolean {
-    for(i in 1..fact-1) {
+fun isSimple(num: Int): Boolean {
+    if (num in 0..1) return false
+    for(i in 1..num-1) {
         if ((i == 1)) continue
-        else if (fact % i == 0) return false
+        else if (num % i == 0) return false
     }
     return true
 }
