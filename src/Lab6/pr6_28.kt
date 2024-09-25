@@ -1,12 +1,11 @@
 package Lab6
 
+import kotlin.random.Random
+
 fun main() {
-    print("Введите размер массива: ")
-    val n = readln().toInt()
-    val arr = IntArray(n)
-    println("Массив: ")
-    for(i in 0..n-1){
-        arr[i] = readln().toInt()
-    }
-    println("Ваш массив: ${arr.joinToString("  ")}")
+    val N = 10
+    val arr = Array<Int>(N, { Random.nextInt(0, 100) })
+    println("Выводим массив?: ")
+    if (readln().lowercase() == "да") print(arr.joinToString(" "))
+    else print("Ну ладно")
 }

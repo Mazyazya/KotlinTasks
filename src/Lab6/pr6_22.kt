@@ -9,13 +9,6 @@ fun main(){
         arr[i] = (1..100).random()
         print("${arr[i]}  ")
     }
-
-    val max = arr.max()
-    val newArr = del(arr, max)
-    val max2 = newArr.max()
-    print("\nВторой максимальный элемент: $max2")
-}
-
-fun del(arr: IntArray, max: Int): IntArray{
-    return arr.filter { it != max }.toIntArray()
+    val newArr = arr.filter { it != arr.max() }.toIntArray()
+    print("\nВторой максимальный элемент: ${newArr.max()}")
 }
