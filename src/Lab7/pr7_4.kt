@@ -30,8 +30,8 @@ fun main() {
     when {
         player1.Score > 21 -> println("Вы проиграли")
         player2.Score > 21 -> println("Вы выиграли")
-        player1.Score > player2.Score -> println("Вы проиграли")
-        player1.Score < player2.Score -> println("Вы выиграли")
+        player1.Score > player2.Score -> println("Вы выиграли")
+        player1.Score < player2.Score -> println("Вы проиграли")
         else -> println("Ничья")
     }
 }
