@@ -6,6 +6,4 @@ fun main() {
     println("В строке ${vowels(str)} гласных")
 }
 
-fun vowels(str: String): Int {
-    return str.toCharArray().intersect("АОУЫЭЕЁИЮЯаоуыэеёиюя".toSet()).size
-}
+fun vowels(str: String): Int  = str.filter { it in "АОУЫЭЕЁИЮЯаоуыэеёиюя" }.length
