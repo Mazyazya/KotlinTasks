@@ -5,7 +5,7 @@ fun main() {
     val text = readln()
     print("Введите количество повторений: ")
     val n = readln().toInt() - 1
-    println("Строка: ${repetition(text, n )}")
+    println("Строка: ${repetition(text, n)}")
 }
 
 fun repetition(text: String, n: Int): String {
