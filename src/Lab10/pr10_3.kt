@@ -11,14 +11,19 @@ fun main(){
 fun ceasarCiphler(str: String, act: Char, num: Int): String{
     val chipStr = mutableListOf<Char>()
     var chipChar: Char
-    for (i in str){
-        if (i == ' ') { chipStr.add(i); continue }
-        if (act == '>') chipChar = (i.code + num).toChar()
-        else chipChar = (i.code - num).toChar()
-        when{
-            chipChar.code > 'я'.code -> chipChar = (chipChar.code - ('я'.code - 'А'.code + 1)).toChar()
-            chipChar.code < 'А'.code -> chipChar = (chipChar.code + ('я'.code - 'А'.code + 1)).toChar()
-        }
+    val charList = ('А'..'Е') + 'Ё' + ('Ж'..'Я') + ('а'..'е') + 'ё' + ('ж'..'я')
+    for (i in str) {
+        if (i == ' ') {chipStr.add(i); continue}
+        if (act == '>')
+            when {
+                charList.indexOf(i) + num > charList.size -> chipChar = charList[charList.indexOf(i) + num - 66]
+                else -> chipChar = charList[charList.indexOf(i) + num]
+            }
+        else
+            when {
+                charList.indexOf(i) - num < 0 -> chipChar = charList[charList.indexOf(i) - num + 66]
+                else -> chipChar = charList[charList.indexOf(i) - num]
+            }
         chipStr.add(chipChar)
     }
     return chipStr.joinToString("")
