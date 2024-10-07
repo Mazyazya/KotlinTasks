@@ -16,7 +16,7 @@ fun ceasarCiphler(str: String, act: Char, num: Int): String{
         if (i == ' ') {chipStr.add(i); continue}
         if (act == '>')
             when {
-                charList.indexOf(i) + num > charList.size -> chipChar = charList[charList.indexOf(i) + num - 66]
+                charList.indexOf(i) + num >= charList.size -> chipChar = charList[charList.indexOf(i) + num - 66]
                 else -> chipChar = charList[charList.indexOf(i) + num]
             }
         else
